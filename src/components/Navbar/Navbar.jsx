@@ -1,21 +1,22 @@
 import cl from './Navbar.module.css'
+import {NavLink} from "react-router-dom";
 
 
 const Navbar = ()=>{
     return(
 
             <nav className={cl.nav}>
-                <div className={cl.item}>
-                    <a href="/content">Home</a>
+                <div>
+                    <NavLink to="/content" className={data=>data.isActive?cl.activeLink:cl.item}>Home</NavLink>
                 </div>
-                <div className={cl.item}>
-                    <a>About</a>
+                <div>
+                    <NavLink to="/about" className={data=>data.isActive?cl.activeLink:cl.item}>About</NavLink>
                 </div>
-                <div className={cl.item}>
-                    <a href="/dialogs">Messages</a>
+                <div>
+                    <NavLink to="/dialogs" className={data=>data.isActive?cl.activeLink:cl.item}>Messages</NavLink>
                 </div>
-                <div className={cl.item}>
-                    <a>Feed</a>
+                <div>
+                    <NavLink to="/news" className={data=>data.isActive?cl.activeLink:cl.item}>Feed</NavLink>
                 </div>
             </nav>
 

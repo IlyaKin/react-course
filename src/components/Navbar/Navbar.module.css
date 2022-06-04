@@ -2,11 +2,16 @@
     grid-area: n;
     background-color: aqua;
     border-radius: 8px;
+    padding: 20px;
 }
 .item{
     color: white;
+    text-decoration: none;
+
 }
 
-.item.active{
-    color: darkred;
+.activeLink{
+    color: red;
+    text-decoration: none;
+
 }
