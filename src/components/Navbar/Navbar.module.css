@@ -7,11 +7,11 @@
 .item{
     color: white;
     text-decoration: none;
-
+    font-family: "Comic Sans MS", sans-serif;
 }
 
 .activeLink{
     color: red;
     text-decoration: none;
-
+    font-family: "Comic Sans MS", sans-serif;
 }

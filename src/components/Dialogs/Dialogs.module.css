@@ -1,0 +1,19 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.dialogsItems{
+    color: cadetblue;
+    font-family: "Comic Sans MS", sans-serif;
+}
+.dialogsItems.active{
+    color: brown;
+}
+
+.messages{
+    color: #595fff;
+    font-family: "Comic Sans MS", sans-serif;
+}
+.message{
+
+}
