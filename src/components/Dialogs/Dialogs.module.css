@@ -6,6 +6,13 @@
     color: cadetblue;
     font-family: "Comic Sans MS", sans-serif;
 }
+.dialogsItems a{
+    text-decoration: none;
+    color: cadetblue;
+}
+.dialogsItems a.active{
+    color: darkred;
+}
 .dialogsItems.active{
     color: brown;
 }

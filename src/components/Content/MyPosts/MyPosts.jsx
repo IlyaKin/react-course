@@ -1,14 +1,25 @@
 import cl from './MyPosts.module.css'
 import Post from "./Posts/Post";
 
-const MyPosts = () =>{
-    return(
-        <div>
-            <textarea></textarea>
-            <button>Add</button>
-            <button>Delete</button>
-            <Post likes = '5' text='Whats up!'/>
-            <Post likes = '7' text='Who are you?'/>
+const MyPosts = () => {
+    let postsData = [
+        {id:'1', likes:'12', text:'Whats up!'},
+        {id:'2', likes:'41', text:'Who are you?'}]
+
+    let posts = postsData.map(p => <Post likes={p.likes} text={p.text}/>)
+    return (
+        <div className={cl.postsBlock}>
+            <h3>My Posts</h3>
+            <div><textarea>
+
+            </textarea>
+            </div>
+            <div>
+                <button>Add</button>
+            </div>
+            <div className={cl.posts}>
+                {posts}
+            </div>
         </div>
     )
 }

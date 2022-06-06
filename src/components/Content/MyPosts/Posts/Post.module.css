@@ -1,6 +1,9 @@
-
+.item{
+    margin-top: 10px;
+}
 
 .item img{
     width: 40px;
     height: auto;
+    border-radius: 50%;
 }
