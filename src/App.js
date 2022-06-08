@@ -9,6 +9,7 @@ import News from "./components/News/News";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 
+
 const App = (props)=>{
 
 
@@ -20,7 +21,7 @@ const App = (props)=>{
         <div className="app-content-c">
             <Routes>
             <Route path='/dialogs/*' element=<Dialogs dialogsData={props.state.dialogsPage}/>/>
-            <Route path='/content' element=<Content postsData={props.state.profilePage}/>/>
+            <Route path='/content' element=<Content postsData={props.state.profilePage} addPost={props.addPost}/>/>
             <Route path='/about' element=<About />/>
             <Route path='/news' element=<News />/>
             </Routes>
