@@ -1,11 +1,13 @@
 import {rerenderTree} from "../render";
 
-
 let state = {
     profilePage:{
         posts:[
-            {id:'1', likes:'12', text:'Whats up!'},
-            {id:'2', likes:'41', text:'Who are you?'}]},
+            {id: 1, likes:'12', text:'Whats up!'},
+            {id: 2, likes:'41', text:'Who are you?'}],
+        newPostText: ''
+    },
+
     dialogsPage:{
         dialogs:[{id:"1", name:"Alexey"},
             {id:"2", name: "Irina"},
@@ -20,13 +22,20 @@ let state = {
     }
 
 }
- export let addPost = (postMessage) =>{
+ export let addPost = () =>{
+    let id = state.profilePage.posts.length+1;
     let newPost = {
-        id:"3",
+        id: id,
         likes:"0",
-        text:postMessage,
+        text:state.profilePage.newPostText,
     }
     state.profilePage.posts.push(newPost);
      rerenderTree(state);
 }
+ export let updatePostText = (someText) => {
+    state.profilePage.newPostText = someText;
+     rerenderTree(state);
+}
+
+
 export default state;
