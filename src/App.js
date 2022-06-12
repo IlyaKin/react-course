@@ -7,6 +7,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import About from "./components/About/About";
 import News from "./components/News/News";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {updateTextMessage} from "./redux/state";
 
 const App = (props)=>{
   return (
@@ -16,7 +17,7 @@ const App = (props)=>{
         <Navbar />
         <div className="app-content-c">
             <Routes>
-            <Route path='/dialogs/*' element=<Dialogs dialogsData={props.state.dialogsPage}/>/>
+            <Route path='/dialogs/*' element=<Dialogs dialogsData={props.state.dialogsPage} addMessage={props.addMessage} updateTextMessage={props.updateTextMessage}/>/>
             <Route path='/content' element=<Content profilePage={props.state.profilePage} addPost={props.addPost} updatePostText={props.updatePostText}/>/>
             <Route path='/about' element=<About />/>
             <Route path='/news' element=<News />/>
