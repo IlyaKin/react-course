@@ -2,6 +2,7 @@
 import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
+import Friends from "./components/Friends/Friends";
 import Content from "./components/Content/Content";
 import Dialogs from "./components/Dialogs/Dialogs";
 import About from "./components/About/About";
@@ -17,8 +18,9 @@ const App = (props)=>{
         <Navbar />
         <div className="app-content-c">
             <Routes>
-            <Route path='/dialogs/*' element=<Dialogs dialogsData={props.state.dialogsPage} addMessage={props.addMessage} updateTextMessage={props.updateTextMessage}/>/>
-            <Route path='/content' element=<Content profilePage={props.state.profilePage} addPost={props.addPost} updatePostText={props.updatePostText}/>/>
+            <Route path='/dialogs/*' element=<Dialogs dialogsData={props.state.dialogsPage} dispatch={props.dispatch}/>/>
+            <Route path='/content' element=<Content profilePage={props.state.profilePage} dispatch={props.dispatch}/>/>
+            <Route path='/friends' element=<Friends users={props.state.users}/>/>
             <Route path='/about' element=<About />/>
             <Route path='/news' element=<News />/>
             </Routes>

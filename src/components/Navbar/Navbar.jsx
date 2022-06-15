@@ -18,6 +18,9 @@ const Navbar = ()=>{
                 <div>
                     <NavLink to="/news" className={data=>data.isActive?cl.activeLink:cl.item}>Feed</NavLink>
                 </div>
+                <div>
+                    <NavLink to="/friends" className={data=>data.isActive?cl.activeLink:cl.item}>Friends</NavLink>
+                </div>
             </nav>
 
     )

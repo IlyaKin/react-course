@@ -2,23 +2,18 @@
     display: grid;
     grid-template-columns: 2fr 4fr 6fr;
 }
-.dialogsItems{
-    color: cadetblue;
-    font-family: "Comic Sans MS", sans-serif;
-}
 .dialogsItems a{
+    margin-left: 5px;
     text-decoration: none;
-    color: cadetblue;
+    color: white;
+    font-family: "Comic Sans MS", sans-serif;
 }
 .dialogsItems a.active{
     color: darkred;
 }
-.dialogsItems.active{
-    color: brown;
-}
 
 .messages{
-    color: #595fff;
+    color: darkred;
     font-family: "Comic Sans MS", sans-serif;
 }
 .message{
