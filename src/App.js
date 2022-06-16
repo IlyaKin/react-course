@@ -7,12 +7,12 @@ import Content from "./components/Content/Content";
 import Dialogs from "./components/Dialogs/Dialogs";
 import About from "./components/About/About";
 import News from "./components/News/News";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {updateTextMessage} from "./redux/state";
+import { Route, Routes} from "react-router-dom";
+
 
 const App = (props)=>{
   return (
-    <BrowserRouter>
+
       <div className="App">
         <Header />
         <Navbar />
@@ -26,7 +26,7 @@ const App = (props)=>{
             </Routes>
         </div>
     </div>
-    </BrowserRouter>
+
   );
 }
 

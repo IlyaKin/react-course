@@ -4,3 +4,6 @@
 .posts{
     margin-top: 5px;
 }
+.postsBlock h3{
+    color: red;
+}
