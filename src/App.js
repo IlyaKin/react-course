@@ -8,6 +8,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import About from "./components/About/About";
 import News from "./components/News/News";
 import { Route, Routes} from "react-router-dom";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 const App = (props)=>{
@@ -18,8 +19,8 @@ const App = (props)=>{
         <Navbar />
         <div className="app-content-c">
             <Routes>
-            <Route path='/dialogs/*' element=<Dialogs dialogsData={props.state.dialogsPage} dispatch={props.dispatch}/>/>
-            <Route path='/content' element=<Content profilePage={props.state.profilePage} dispatch={props.dispatch}/>/>
+            <Route path='/dialogs/*' element=<DialogsContainer store={props.store}/>/>
+            <Route path='/content' element=<Content store={props.store}/>/>
             <Route path='/friends' element=<Friends users={props.state.users}/>/>
             <Route path='/about' element=<About />/>
             <Route path='/news' element=<News />/>

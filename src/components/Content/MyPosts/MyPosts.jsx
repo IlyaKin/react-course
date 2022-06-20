@@ -6,11 +6,11 @@ import {addPostActionCreator, updatePostTextActionCreator} from "../../../redux/
 
 const MyPosts = (props) => {
      let addPost = ()=>{
-         props.dispatch(addPostActionCreator());
+         props.addPost();
      }
      let onPostChange = (e)=>{
          let text = e.target.value;
-         props.dispatch(updatePostTextActionCreator(text));
+         props.onPostChange(text);
      }
      let posts = props.posts.map(p => <Post likes={p.likes} text={p.text}/>)
     return (
