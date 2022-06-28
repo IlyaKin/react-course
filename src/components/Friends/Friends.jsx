@@ -4,7 +4,7 @@ import cl from "./Friends.module.css"
 
 const Friends = (props)=>{
 
-    let users = props.users.map(user=> <FriendItem name={user.name} id={user.id}/>)
+    let users = props.friends.map(user=> <FriendItem name={user.name} id={user.id}/>)
     return (
         <div>
         <div>

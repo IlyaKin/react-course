@@ -9,7 +9,8 @@ import About from "./components/About/About";
 import News from "./components/News/News";
 import { Route, Routes} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
-
+import FriendsContainer from "./components/Friends/FriendsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 const App = (props)=>{
   return (
@@ -21,9 +22,10 @@ const App = (props)=>{
             <Routes>
             <Route path='/dialogs/*' element=<DialogsContainer />/>
             <Route path='/content' element=<Content />/>
-            <Route path='/friends' element=<Friends />/>
+            <Route path='/friends' element=<FriendsContainer />/>
             <Route path='/about' element=<About />/>
             <Route path='/news' element=<News />/>
+            <Route path='/users' element=<UsersContainer />/>
             </Routes>
         </div>
     </div>
