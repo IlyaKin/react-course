@@ -1,36 +1,51 @@
 import React from "react";
-import cl from './Users.module.css'
+import cl from './Users.module.css';
+import * as axios from 'axios';
+import userPhoto from './../../assets/images/userPhoto.jpg'
 
-const Users = (props)=>{
+class Users extends React.Component{
 
+   getUsers = ()=>{
+        if(this.props.users.length===0){
+            axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response=>
+                this.props.setUsersAction(response.data.items))
+        }
+    }
 
-    return <div>
-        {
-            props.users.map(u=> <div key={u.id}>
+    render() {
+     return   <div>
+            <button onClick={this.getUsers}>Get Users</button>
+            {
+
+                this.props.users.map(u => <div key={u.id}>
                 <span>
-                    <div><img src={u.photoUrl} className={cl.photoUser}/></div>
+                    <div><img src={u.photos.small != null ? u.photos.small : userPhoto} className={cl.photoUser}/></div>
                     <div>
                       {u.followed
-                          ? <button onClick={()=>{props.unfollowAction(u.id)}}>Unfollow</button>
-                          : <button onClick={()=>{props.followAction(u.id)}}>Follow</button>}
+                          ? <button onClick={() => {
+                              this.props.unfollowAction(u.id)
+                          }}>Unfollow</button>
+                          : <button onClick={() => {
+                              this.props.followAction(u.id)
+                          }}>Follow</button>}
                     </div>
                 </span>
-                <span>
                     <span>
-                        <div>{u.firstName}</div>
+                    <span>
+                        <div>{u.name}</div>
                         <div>{u.status}</div>
                     </span>
                     <span>
-                        <div>{u.location.city}</div>
+                        <div>Moscow</div>
                         <div>
-                            {u.location.country}
+                            Russia
                         </div>
                     </span>
                 </span>
-            </div>)
-        }
+                </div>)
+            }
 
-    </div>
-
+        </div>
+    }
 }
 export default Users;
