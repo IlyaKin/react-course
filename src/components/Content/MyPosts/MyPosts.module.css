@@ -3,7 +3,13 @@
 }
 .posts{
     margin-top: 5px;
+    color: white;
+    font-family: "CyberwarRegular", sans-serif;
+
 }
 .postsBlock h3{
-    color: red;
+    color: #b11bb7;
+    font-family: CyberwarRegular, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
 }

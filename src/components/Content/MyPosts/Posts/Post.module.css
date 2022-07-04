@@ -1,9 +1,17 @@
 .item{
     margin-top: 10px;
+    display: grid;
+    grid-template-columns: 60px 500px 220px;
+
 }
 
+
 .item img{
+
     width: 40px;
     height: auto;
     border-radius: 50%;
+}
+.postText{
+
 }

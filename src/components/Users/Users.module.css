@@ -1,4 +1,33 @@
+.users{
+    display: grid;
+    color: white;
+    grid-template-columns: 2fr 3fr 2fr 2fr 2fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: 'ph nN st ci coun f';
+}
+
+div{
+    margin-bottom: 5px;
+}
+
 .photoUser{
     width: 50px;
     border-radius: 50%;
+    grid-area: ph;
+}
+
+.following{
+    grid-area: f;
+}
+.nickName{
+    grid-area: nN;
+}
+.status{
+    grid-area: st;
+}
+.city{
+    grid-area: ci;
+}
+.country{
+    grid-area: coun;
 }

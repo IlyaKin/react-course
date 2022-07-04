@@ -1,9 +1,13 @@
 .header{
     grid-area: h;
-    background-color: dodgerblue;
+    background-color: #481a1a;
     border-radius: 8px;
 }
-.header img{
-    margin: 10px 20px;
-    width: 20px;
+
+.logo{
+    font-family: CyberwarRegular, sans-serif;
+    font-size: 24px;
+    color: #b11bb7;
+    letter-spacing: 2px;
+    margin-left: 20px;
 }

@@ -1,17 +1,20 @@
 .nav{
     grid-area: n;
-    background-color: dodgerblue;
+    background-color: #481a1a;
     border-radius: 8px;
     padding: 20px;
 }
 .item{
     color: white;
     text-decoration: none;
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "CyberwarRegular", sans-serif;
+    font-size: 24px;
+    line-height: 35px;
 }
 
 .activeLink{
-    color: red;
+    color: #b11bb7;
     text-decoration: none;
-    font-family: "Comic Sans MS", sans-serif;
+    font-family: "CyberwarRegular", sans-serif;
+    font-size: 24px;
 }
