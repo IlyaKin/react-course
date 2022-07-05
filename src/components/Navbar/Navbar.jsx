@@ -7,7 +7,7 @@ const Navbar = ()=>{
 
             <nav className={cl.nav}>
                 <div>
-                    <NavLink to="/content" className={data=>data.isActive?cl.activeLink:cl.item}>Home</NavLink>
+                    <NavLink to="/profile" className={data=>data.isActive?cl.activeLink:cl.item}>Home</NavLink>
                 </div>
                 <div>
                     <NavLink to="/about" className={data=>data.isActive?cl.activeLink:cl.item}>About</NavLink>

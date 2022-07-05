@@ -3,7 +3,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Friends from "./components/Friends/Friends";
-import Content from "./components/Content/Content";
+import ProfileContainer from "./components/Content/ProfileContainer";
 import Dialogs from "./components/Dialogs/Dialogs";
 import About from "./components/About/About";
 import News from "./components/News/News";
@@ -21,7 +21,8 @@ const App = (props)=>{
         <div className="app-content-c">
             <Routes>
             <Route path='/dialogs/*' element=<DialogsContainer />/>
-            <Route path='/content' element=<Content />/>
+            <Route path='/profile/:userId' element={<ProfileContainer />}/>
+            <Route path='/profile' element=<ProfileContainer />/>
             <Route path='/friends' element=<FriendsContainer />/>
             <Route path='/about' element=<About />/>
             <Route path='/news' element=<News />/>

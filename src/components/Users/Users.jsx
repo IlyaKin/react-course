@@ -1,7 +1,8 @@
 import React from "react";
 import cl from './Users.module.css';
-import * as axios from 'axios';
 import userPhoto from './../../assets/images/userPhoto.jpg'
+import Preloader from "../Preloader/Preloader";
+import {NavLink} from "react-router-dom";
 
 let Users = (props) => {
     return <div>
@@ -10,7 +11,11 @@ let Users = (props) => {
 
             props.users.map(u => <div key={u.id}>
                 <div className={cl.users}>
-                    <div><img src={u.photos.small != null ? u.photos.small : userPhoto} className={cl.photoUser}/></div>
+                    <div>
+                        <NavLink to= {'/profile/' + u.id}>
+                        <img src={u.photos.small != null ? u.photos.small : userPhoto} className={cl.photoUser}/>
+                        </NavLink>
+                        </div>
                     <div className={cl.following}>
                         {u.followed
                             ? <button onClick={() => {
@@ -19,6 +24,7 @@ let Users = (props) => {
                             : <button onClick={() => {
                                 props.followAction(u.id)
                             }}>Follow</button>}
+
                     </div>
 
 
@@ -34,12 +40,14 @@ let Users = (props) => {
                 </div>
             </div>)
         }
+
         <div>
-            <button onClick={(e) => {
+            {props.isFetching?<Preloader />:<button className={cl.showMoreButton} onClick={(e) => {
                 props.onPageChanged()
             }}>SHOW MORE
-            </button>
+            </button>}
         </div>
+
     </div>
 
 }

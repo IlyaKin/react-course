@@ -1,0 +1,6 @@
+.preloader{
+    display: block;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 50%;
+}

@@ -12,7 +12,7 @@ let reducers = combineReducers({
    friends: friendsReducer,
    usersPage:usersReducer});
 let store = createStore(reducers);
-
+window.store=store;
 
 export default store;
 

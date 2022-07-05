@@ -1,11 +1,16 @@
 import cl from "./ProfileInfo.module.css"
+import Preloader from "../../Preloader/Preloader";
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+    if(!props.usersProfile){
+        return <Preloader />
+    }
+
     return (
         <div>
-        <img src="https://klike.net/uploads/posts/2019-06/1561526578_1.jpg" alt=""/>
     <div className={cl.description}>
-        Avatar + description
+        <img src={props.usersProfile.photos.large} alt=""/>
+
     </div>
         </div>
 )

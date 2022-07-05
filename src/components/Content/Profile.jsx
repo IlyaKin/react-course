@@ -1,16 +1,16 @@
-import cl from './Content.module.css'
+import cl from './Profile.module.css'
 import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 
-const Content = (props)=>{
+const Profile = (props)=>{
 
     return(
             <div className={cl.content}>
-                <ProfileInfo />
+                <ProfileInfo usersProfile={props.usersProfile}/>
                 <MyPostsContainer store={props.store}/>
                 </div>
     )
 }
-export default Content;
+export default Profile;
