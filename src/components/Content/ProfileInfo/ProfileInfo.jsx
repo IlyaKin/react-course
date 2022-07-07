@@ -9,9 +9,24 @@ const ProfileInfo = (props) => {
     return (
         <div>
     <div className={cl.description}>
-        <img src={props.usersProfile.photos.large} alt=""/>
-
+        <img  className={cl.usersPhoto} src={props.usersProfile.photos.large} alt=""/>
+        <div className={cl.profileUserName}>{props.usersProfile.fullName}</div>
+        <div className={cl.aboutBlock}>{props.usersProfile.aboutMe}</div>
+        <div className={cl.jobBlock}>{props.usersProfile.lookingForAJob?<p>Я ищу работу</p>:<p>{props.usersProfile.lookingForAJobDescription}</p>}</div>
+        <div className={cl.usersContacts}>
+            <h3>My Contacts:</h3>
+            <ul>
+                <li>Facebook: {props.usersProfile.contacts.facebook}</li>
+                <li>Web-Site: {props.usersProfile.contacts.website}</li>
+                <li>VK: {props.usersProfile.contacts.vk}</li>
+                <li>Twitter: {props.usersProfile.contacts.twitter}</li>
+                <li>Instagram: {props.usersProfile.contacts.instagram}</li>
+                <li>You-tube: {props.usersProfile.contacts.youtube}</li>
+                <li>Git-Hub: {props.usersProfile.contacts.github}</li>
+            </ul>
+        </div>
     </div>
+
         </div>
 )
 }
