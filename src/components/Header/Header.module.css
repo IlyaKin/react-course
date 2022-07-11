@@ -5,9 +5,19 @@
 }
 
 .logo{
+    float: left;
     font-family: CyberwarRegular, sans-serif;
     font-size: 24px;
     color: #b11bb7;
     letter-spacing: 2px;
     margin-left: 20px;
+}
+
+.loginButton{
+    margin-top: 20px;
+    float: right;
+    color: white;
+    font-family: "CyberwarRegular", sans-serif;
+    margin-right: 10px;
+    letter-spacing: 2px;
 }

@@ -11,12 +11,13 @@ import { Route, Routes} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 const App = (props)=>{
   return (
 
       <div className="App">
-        <Header />
+        <HeaderContainer />
         <Navbar />
         <div className="app-content-c">
             <Routes>
