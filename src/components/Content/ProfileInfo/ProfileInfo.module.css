@@ -19,11 +19,11 @@
     grid-area: pUN;
     letter-spacing: 2px;
     margin-left: 20px;
-
 }
 .usersPhoto{
     grid-area: uPh;
     height: 250px;
+    width: 250px;
 }
 .aboutBlock{
     grid-area: aB;
